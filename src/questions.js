@@ -1,7 +1,7 @@
 export const questions = [
     {
         id: 1,
-        question: 'what do JS stand for ?',
+        question: 'que signifie JS ?',
         answers: {
             a: 'Jésus',
             b: 'JsonStandard',
@@ -12,7 +12,7 @@ export const questions = [
     },
     {
         id: 2,
-        question: 'what is the difference between const and let',
+        question: 'quel est la différence entre let et const',
         answers: {
             a: 'aucune, c\'est juste un autre façon de déclarer une variable',
             b: 'const ne peux pas être reassigner',
@@ -24,14 +24,50 @@ export const questions = [
     },
     {
         id: 3,
-        question: 'which one is a correct function declaration',
+        question: 'quel est la bonne syntaxe',
         answers: {
-            a: 'function(){...code }',
-            b: 'let func = () => {...code}',
-            c: 'const funct = () => ...code',
-            d: 'ALL OF THE ABOVE'
+            a: 'function(){ // code }',
+            b: 'let func = () => { // code}',
+            c: 'const funct = () => // code',
+            d: 'toutes sont des syntaxes correctes en Javascript '
         },
         expected_answer: 'd'
+
+    },
+    {
+        id: 4,
+        question: 'Quel est le rapport entre Java et JavaScript?',
+        answers: {
+            a: ' C\'est le même langage, mais le nom  JavaScript  est utilisé pour le code s\'exécutant dans une page Web.',
+            b: 'Ce sont deux langages différents, malgré quelques points communs dans la syntaxe.',
+            c: 'Java est une version améliorée de JavaScript.',
+            d: 'Java est une île, ça n\'a rien à voir !'
+        },
+        expected_answer: 'b'
+
+    },
+    {
+        id: 5,
+        question: 'Lequel de ces types d\'événements n\'existe pas?',
+        answers: {
+            a: 'blur',
+            b: 'load',
+            c: 'mouseclick.',
+            d: 'mouseout'
+        },
+        expected_answer: 'c'
+
+    },
+    {
+        id: 6,
+        question: 'Quelle méthode n\'existe pas dans le DOM?',
+        answers: {
+            a: 'document.getElementsByClassName',
+            b: 'document.getElementsByTagName',
+            c: 'document.getElementsByAttribute.',
+            d: 'document.getElementById'
+        },
+        expected_answer: 'c'
 
     },
 ]
