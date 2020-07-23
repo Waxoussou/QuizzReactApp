@@ -1,5 +1,6 @@
 body {
   background: cornflowerblue;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App {
@@ -22,7 +23,8 @@ body {
 .answer-btn {
   border: none;
   margin: 10px 0;
-  height: 50px;
+  min-height: 50px;
+  word-wrap: break-word;
 }
 
 .next-question {
@@ -32,11 +34,53 @@ body {
 .result {
   text-align: center;
   margin: auto;
+  /* font-weight: 600; */
+  font-size: x-large;
 }
 
 .result p {
   margin: 20px 0;
   padding: 0;
+}
+
+.result span {
+  font-weight: 900;
+}
+
+.restart-container {
+  margin: 150px auto;
+}
+
+.restart-container>p {
+  position: relative;
+  z-index: 1000;
+  background: cornsilk;
+}
+
+/* .restart-container>p::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: cornsilk;
+  top: 0;
+  left: 0;
+  z-index: 1;
+} */
+
+.restart-btn {
+  background: cornsilk;
+  border-radius: 4px;
+  border: none;
+  width: 100px;
+  height: 50px;
+  font-weight: 900;
+  box-shadow: 1px 7px 9px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  transform: scale(1.1);
 }
 
 .progress {
@@ -52,7 +96,13 @@ body {
   font-weight: bold;
 }
 
+.msg-container {
+  height: 35px;
+}
+
 .alert-msg {
-  color: crimson;
-  font-weight: bold;
+  background: crimson;
+  color: cornsilk;
+  font-weight: 900;
+  border-radius: 4px;
 }

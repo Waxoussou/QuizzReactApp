@@ -1,7 +1,7 @@
 import React from 'react';
 import Answer from './Answer';
-
-const Question = ({ question, next, handleSelection, selection }) => {
+import Error from './Error';
+const Question = ({ question, next, handleSelection, selection, error }) => {
 
     return <div className="quiz-container">
         <form onSubmit={next}>
@@ -15,6 +15,10 @@ const Question = ({ question, next, handleSelection, selection }) => {
                     selection={selection}
                 />
             })}
+            <div className='msg-container'>
+                {error && <Error error={error} />}
+            </div>
+
             <input className='next-question' type="submit" value="next" onClick={next} />
         </form>
     </div>

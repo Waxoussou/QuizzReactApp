@@ -1,7 +1,7 @@
 export const questions = [
     {
         id: 1,
-        question: 'que signifie JS ?',
+        question: 'Que signifie JS ?',
         answers: {
             a: 'Jésus',
             b: 'JsonStandard',
@@ -12,7 +12,7 @@ export const questions = [
     },
     {
         id: 2,
-        question: 'quel est la différence entre let et const',
+        question: 'Quel est la différence entre let et const',
         answers: {
             a: 'aucune, c\'est juste un autre façon de déclarer une variable',
             b: 'const ne peux pas être reassigner',
@@ -24,7 +24,7 @@ export const questions = [
     },
     {
         id: 3,
-        question: 'quel est la bonne syntaxe',
+        question: 'Quel est la bonne syntaxe',
         answers: {
             a: 'function(){ // code }',
             b: 'let func = () => { // code}',
@@ -70,4 +70,48 @@ export const questions = [
         expected_answer: 'c'
 
     },
+    {
+        id: 7,
+        question: `Comment afficher la page précédente du navigateur ?`,
+        answers: {
+            a: 'previous()',
+            b: 'c\'est impossible',
+            c: 'rollback()',
+            d: "history.back()"
+        },
+        expected_answer: 'd'
+    },
+    {
+        id: 8,
+        question: `La valeur d'une date représente le nombre de millisecondes écoulées depuis le ?`,
+        answers: {
+            a: '01 janvier 1990',
+            b: `01 janvier de l'année 0`,
+            c: `1er janvier 1850`,
+            d: `1er janvier 1970`
+        },
+        expected_answer: 'd'
+    },
+    {
+        id: 9,
+        question: `Que retourne isNaN("ABC"); ?`,
+        answers: {
+            a: 'true',
+            b: 'false',
+            c: 'une erreur',
+            d: 'ABC'
+        },
+        expected_answer: 'a'
+    },
+    {
+        id: 10,
+        question: 'Quelle méthode permet d\'iterer sur un les propriétés d\'un objet',
+        answers: {
+            a: 'for ... of ',
+            b: 'for ... in',
+            c: 'foreach',
+            d: 'for'
+        },
+        expected_answer: 'b'
+    }
 ]

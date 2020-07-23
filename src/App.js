@@ -78,13 +78,14 @@ function App() {
         <>
           {!end ?
             <>
-              <p className='progress'> Question  <span>{Qcount + 1}</span> / <span> {questions.length} </span></p>
-              {error && <Error error={error} />}
+              <p className='progress'> Question <span>{Qcount + 1}</span> / <span>{questions.length}</span></p>
+              {/* {error && <Error error={error} />} */}
               <Question
                 question={questions[Qcount]}
                 next={next}
                 handleSelection={handleSelection}
-                selection={selection} />
+                selection={selection}
+                error={error} />
 
             </> :
             <Result startOver={startOver} score={state.score} total={questions.length} />
