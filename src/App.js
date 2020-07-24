@@ -23,7 +23,7 @@ function App() {
   const startPlaying = () => {
     setState({
       ...state,
-      gameTimeStart: new Date()
+      gameTimeStart: Date.now()
     })
     !game && setGame(true)
   }
@@ -40,7 +40,7 @@ function App() {
   }
   const next = (e) => {
     e.preventDefault()
-    if (!selection) return handleError('no answer selected');
+    // if (!selection) return handleError('no answer selected');
 
     setState({
       ...state,
@@ -48,7 +48,7 @@ function App() {
         qid: Qcount + 1, answer: selection
       }],
       score: selection === questions[Qcount].expected_answer ? state.score + 1 : state.score,
-      gameTimeEnd: Qcount + 1 < questions.length ? new Date() : null
+      gameTimeEnd: !(Qcount + 1 < questions.length) ? Date.now() : null
     })
 
     setSelection(null)
@@ -57,14 +57,13 @@ function App() {
 
   const startOver = () => {
     setState({
-      currentQuestion: 0,
-      currentSelection: null,
+      gameTimeStart: null,
+      gameTimeEnd: null,
       answers: [],
       score: 0,
     })
     setQcount(0)
     setEnd(false)
-    console.log(state);
   }
 
   useEffect(() => {
@@ -88,7 +87,7 @@ function App() {
                 error={error} />
 
             </> :
-            <Result startOver={startOver} score={state.score} total={questions.length} />
+            <Result startOver={startOver} score={state.score} total={questions.length} time={{ start: state.gameTimeStart, end: state.gameTimeEnd }} />
           }</>
       }
     </div >

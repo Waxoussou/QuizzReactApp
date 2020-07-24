@@ -5,6 +5,7 @@ body {
 
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .quiz-container form {
@@ -16,8 +17,45 @@ body {
   background: cornflowerblue;
 }
 
+.starterScreen-container {
+  pointer-events: none;
+  min-height: 10em;
+  margin-top: 30vh;
+  padding: 32px;
+  transform: translateY(-30%);
+  background: linear-gradient(to left, whitesmoke 50%, cornflowerblue 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: background-position .27s ease-in .1s;
+}
+
+.start-quizz {
+  pointer-events: auto;
+  transform: rotate(-5deg);
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+  color: crimson;
+  font-weight: bold;
+  background: linear-gradient(to right, crimson 50%, whitesmoke 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.starterScreen-container:hover .start-quizz {
+  background-position: left bottom;
+  color: whitesmoke;
+}
+
+.starterScreen-container:hover {
+  background-position: right bottom;
+  /* color: whitesmoke; */
+}
+
 .selected {
-  background: greenyellow;
+  background: rgba(220, 233, 46, 0.959);
 }
 
 .answer-btn {

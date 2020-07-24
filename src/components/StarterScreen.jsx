@@ -1,10 +1,10 @@
 import React from 'react';
 
 const StarterScreen = ({ startPlaying }) => {
-    return <>
-        <h1>Start js Quizz</h1>
-        <button className='start-quizz' onClick={startPlaying}>Start</button>
-    </>
+    return <div className='starterScreen-container'>
+        <h1>JS Quizz</h1>
+        <button className='start-quizz' onClick={startPlaying}>Click to start</button>
+    </div>
 }
 
 export default StarterScreen;
