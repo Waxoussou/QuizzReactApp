@@ -4,7 +4,7 @@ const formatTime = (time) => {
     const seconds = Math.floor(time / 1000);
     const minutes = Math.floor(time / (1000 * 60));
     const hours = Math.floor(time / (1000 * 60 * 60));
-    return `${minutes}mn : ${seconds}s`
+    return `${minutes < 10 & '0'}${minutes}mn : ${seconds < 10 & '0'}${seconds}s`
 }
 
 const Result = ({ score, total, startOver, time }) => {

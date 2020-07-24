@@ -19,7 +19,7 @@ const Question = ({ question, next, handleSelection, selection, error }) => {
                 {error && <Error error={error} />}
             </div>
 
-            <input className='next-question' type="submit" value="next" onClick={next} />
+            <input className='next-question' type="submit" value="NEXT QUESTION" onClick={next} />
         </form>
     </div>
 }
